@@ -1,6 +1,4 @@
-#####
 # OS X temporary files
-#
 # c.f. http://www.westwind.com/reference/os-x/invisibles.html
 .DS_Store
 
@@ -10,9 +8,6 @@
 # c.f. http://www.westwind.com/reference/os-x/invisibles.html
 *.swp
 
-#####
-# Node stuff
-#
 # Logs
 logs
 *.log
@@ -21,3 +16,6 @@ npm-debug.log*
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
+
+# Webpack output
+build/
