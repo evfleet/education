@@ -34,6 +34,10 @@ module.exports = {
       filename: "index.html"
     }),
     new ExtractCSSPlugin({ filename: "[name].css" }),
-    new OptimizeCSSPlugin()
+    new OptimizeCSSPlugin({
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      }
+    })
   ]
 }
