@@ -1,13 +1,12 @@
 const path = require ("path");
+const HTMLPlugin = require("html-webpack-plugin");
+const CleanPlugin = require("clean-webpack-plugin");
 const ExtractCSSPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
-const CleanPlugin = require("clean-webpack-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: {
-    bundle: "./src/styles/index.scss"
-  },
+  mode: "production",
+  entry: "./src/scripts/index.js",
   output: {
     path: path.join(__dirname, "./build/"),
   },
@@ -30,7 +29,10 @@ module.exports = {
   },
   plugins: [
     new CleanPlugin(),
-    new CopyPlugin([{ from: "src/index.html", to: "index.html" }]),
+    new HTMLPlugin({
+      template: "src/pages/home/index.html",
+      filename: "index.html"
+    }),
     new ExtractCSSPlugin({ filename: "[name].css" }),
     new OptimizeCSSPlugin()
   ]
