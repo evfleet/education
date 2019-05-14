@@ -29,15 +29,14 @@ module.exports = {
   },
   plugins: [
     new CleanPlugin(),
-    new HTMLPlugin({
-      template: "src/pages/home/index.html",
-      filename: "index.html"
-    }),
+    new HTMLPlugin({ template: "src/index.html" }),
     new ExtractCSSPlugin({ filename: "[name].css" }),
+    /*
     new OptimizeCSSPlugin({
       cssProcessorPluginOptions: {
         preset: ['default', { discardComments: { removeAll: true } }],
       }
     })
+    */
   ]
 }
