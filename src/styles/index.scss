@@ -3,7 +3,11 @@
 @import "base/reset";
 @import "base/typography";
 
-@import "layout/top-bar";
 @import "layout/header";
 
+@import "components/container";
 @import "components/icon";
+@import "components/nav-bar";
+@import "components/top-bar";
+
+@import "pages/home";
